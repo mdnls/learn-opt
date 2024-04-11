@@ -1,0 +1,25 @@
+name: M-L5-D2-B
+
+dim: 2
+
+model:
+  architecture: ReLU_MLP
+  dims:
+    - 2
+    - 10
+    - 10
+    - 10
+    - 10
+    - 2
+
+train:
+  potential:
+    type: BimodalVoronoi
+  dataset:
+    distribution: Gaussian
+  optimization:
+    optimizer: Adam
+    lr: 0.01
+    beta1: 0.9
+    steps: 10000
+    bs: 1000
